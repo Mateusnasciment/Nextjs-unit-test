@@ -1,3 +1,7 @@
+<h1 align="center">
+Unit tests in Next with Jest
+</h1><br>
+
 <h3 align="center">
    Unit tests are very useful to ensure that your components continue to work when performing maintenance in the future. </br></br></br>
 </h3>
@@ -5,11 +9,10 @@
 
 ## Getting Started
 
-First, run the development server:
+start your project
+I assume you already have a basic understanding of the subject and have Node.js and NPM or yarn installed on your machine.
 
-```
-npm run dev
-```
+First, let's start a standard Next project by typing the npx create-next-app command in the terminal, which will ask the following questions:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -25,8 +28,9 @@ package.json
 
 ```
 jest.config.js
- the jest.config.js file controls the settings and standards that jest will follow within the project!
+
  ```
+ the jest.config.js file controls the settings and standards that jest will follow within the project!
 
 babelrc
 babel informs the values ​​in the next folder
@@ -72,3 +76,4 @@ export default function Header() {
     return <p>Header</p>;
 }
 ```
+Save both files and in the terminal run the command npm run test, if everything went well you will have a screen like this: nextjs-jest-tested
