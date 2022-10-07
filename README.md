@@ -6,6 +6,7 @@ Unit tests in Next with Jest
    Unit tests are very useful to ensure that your components continue to work when performing maintenance in the future. </br></br></br>
 </h3>
 
+Because of its framework integration, Next.js projects can create SSR and SSG — or static sites — for use with React. This increases the chances of successfully integrating Next.js into future web application development projects.
 
 ## Getting Started
 
