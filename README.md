@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">
+   Unit tests are very useful to ensure that your components continue to work when performing maintenance in the future. </br></br></br>
+</h3>
+
 
 ## Getting Started
 
@@ -13,42 +16,42 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 
-para definirmos as configurações do jest uitlizaremos alguns arquivos de configuração padrão que podem ser criados com o comando
+to define jest settings we will use some default configuration files that can be created with the command
 ```
 touch jest.config.js .babelrc
 ```
-na pasta raiz do seu projeto e iremos adicionar no 
+in the root folder of your project and we will add in the
 package.json
 
 ```
 jest.config.js
- o arquivo jest.config.js faz o controle das configurações e padrões que o jest irá seguir dentro do projeto !
+ the jest.config.js file controls the settings and standards that jest will follow within the project!
  ```
 
 babelrc
-o babel informa os valores na pastas do next
+babel informs the values ​​in the next folder
 
 package.json
- No package iremos adicionar
+ In the package we will add
 
 ```
  "test": "jest --watch",
     "coverage": "jest --coverage"
 ```
-jest = visualizado de arquivo do teste
-coverage = mensura a cobertura de teste de arquivos individuais
+jest = test file preview
+coverage = measure test coverage of individual files
  
 
- iniciando o TESTE
- Primero criar um arquivo chamado
- Header.test.js dentro da pasta
- components e depois criar  um arquivo Header.js na mesma pasta !
- usando o comando
+ starting the TEST
+ First create a file called
+ Header.test.js inside the folder
+ components and then create a Header.js file in the same folder!
+ using the command
  ```
  touch components/Header.js
  components/Header.test.js
  ```
- no terminal para criar esses arquivos
+ in the terminal to create these files
  ```
  import React from 'react';
 import { render } from '@testing-library/react';
@@ -61,7 +64,7 @@ it('should render Header', () => {
 });
 
 ```
-e no arquivo Header.js
+and in the Header.js file
 ```
 import React from 'react';
 
