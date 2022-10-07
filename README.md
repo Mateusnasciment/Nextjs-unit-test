@@ -4,31 +4,68 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
-```bash
+```
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+para definirmos as configurações do jest uitlizaremos alguns arquivos de configuração padrão que podem ser criados com o comando
+```
+touch jest.config.js .babelrc
+```
+na pasta raiz do seu projeto e iremos adicionar no 
+package.json
 
-## Learn More
+```
+jest.config.js
+ o arquivo jest.config.js faz o controle das configurações e padrões que o jest irá seguir dentro do projeto !
+ ```
 
-To learn more about Next.js, take a look at the following resources:
+babelrc
+o babel informa os valores na pastas do next
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+package.json
+ No package iremos adicionar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+ "test": "jest --watch",
+    "coverage": "jest --coverage"
+```
+jest = visualizado de arquivo do teste
+coverage = mensura a cobertura de teste de arquivos individuais
+ 
 
-## Deploy on Vercel
+ iniciando o TESTE
+ Primero criar um arquivo chamado
+ Header.test.js dentro da pasta
+ components e depois criar  um arquivo Header.js na mesma pasta !
+ usando o comando
+ ```
+ touch components/Header.js
+ components/Header.test.js
+ ```
+ no terminal para criar esses arquivos
+ ```
+ import React from 'react';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import Header from './Header';
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+it('should render Header', () => {
+    const { getByText } = render(<Header />);
+    expect(getByText('Header')).toBeInTheDocument();
+});
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+e no arquivo Header.js
+```
+import React from 'react';
+
+export default function Header() {
+    return <p>Header</p>;
+}
+```
